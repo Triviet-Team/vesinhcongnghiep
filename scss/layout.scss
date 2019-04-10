@@ -72,6 +72,18 @@ $main_color: #EFB100;
                 box-shadow: none;
       }
 
+      &::-webkit-input-placeholder {
+        color: white;
+      }
+
+      &:-ms-input-placeholder {
+        color: white;
+      }
+
+      &::-ms-input-placeholder {
+        color: white;
+      }
+
       &::placeholder {
         color: white;
       }
@@ -89,6 +101,7 @@ $main_color: #EFB100;
 
       i {
         font-size: 24px;
+        -webkit-transition: .3s;
         transition: .3s;
 
         &:hover {
@@ -125,6 +138,7 @@ $main_color: #EFB100;
       a {
         font-weight: 600;
         color: $main_color;
+        -webkit-transition: .3s;
         transition: .3s;
 
         &:hover {
@@ -156,7 +170,8 @@ $main_color: #EFB100;
       position: absolute;
       right: 0;
       top: 9px;
-      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
     }
 
     h5 {
@@ -171,6 +186,7 @@ $main_color: #EFB100;
         font-weight: 600;
         color: $main_color;
         text-transform: uppercase;
+        -webkit-transition: .3s;
         transition: .3s;
 
         &:hover {
@@ -235,7 +251,8 @@ $main_color: #EFB100;
         position: relative;
 
         &:hover ul {
-          transform: none;
+          -webkit-transform: none;
+                  transform: none;
           opacity: 1;
           visibility: initial;
 
@@ -252,9 +269,11 @@ $main_color: #EFB100;
           @include sha;
           border: 0;
           text-align: left;
-          transform: translateY(40px);
+          -webkit-transform: translateY(40px);
+                  transform: translateY(40px);
           opacity: 0;
           visibility: hidden;
+          -webkit-transition: .3s;
           transition: .3s;
           
           li {
@@ -301,7 +320,8 @@ $main_color: #EFB100;
           i {
             font-size: 24px;
             margin-left: 5px;
-            transform: translateY(3px);
+            -webkit-transform: translateY(3px);
+                    transform: translateY(3px);
             display: inline-block;
           }
         }
@@ -433,6 +453,8 @@ $main_color: #EFB100;
       }
 
       &-box {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         margin-bottom: 15px;
 
@@ -485,9 +507,13 @@ $main_color: #EFB100;
   }
 
   &-zone {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    flex-basis: 10px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-preferred-size: 10px;
+        flex-basis: 10px;
     margin: 0 -5px;
 
     .box-service {
@@ -539,13 +565,17 @@ $main_color: #EFB100;
 
   &:hover {
     img {
-      transform: scale(1.2);
-      filter: brightness(1);
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+      -webkit-filter: brightness(1);
+              filter: brightness(1);
     }
   }
 
   img {
-    filter: brightness(.7);
+    -webkit-filter: brightness(.7);
+            filter: brightness(.7);
+    -webkit-transition: .5s;
     transition: .5s;
     width: 100%;
   }
@@ -573,12 +603,15 @@ $main_color: #EFB100;
 
 .box-product {
   background: white;
-  box-shadow: 0 0 7px rgba($color: #000000, $alpha: .16);
+  -webkit-box-shadow: 0 0 7px rgba($color: #000000, $alpha: .16);
+          box-shadow: 0 0 7px rgba($color: #000000, $alpha: .16);
+  -webkit-transition: .3s;
   transition: .3s;
   position: relative;
 
   &:hover {
-    box-shadow: 0 0 15px rgba($color: #000000, $alpha: .16);
+    -webkit-box-shadow: 0 0 15px rgba($color: #000000, $alpha: .16);
+            box-shadow: 0 0 15px rgba($color: #000000, $alpha: .16);
 
     .box-product-img-custom {
       opacity: 1;
@@ -713,6 +746,7 @@ $main_color: #EFB100;
       font-size: 16px;
       font-weight: 600;
       cursor: pointer;
+      -webkit-transition: .3s;
       transition: .3s;
 
       &:hover {
@@ -754,8 +788,11 @@ $main_color: #EFB100;
 
   .service-bonus {
     &-zone {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       margin: 0 -10px;
     }
 
@@ -791,7 +828,8 @@ $main_color: #EFB100;
   .partner-carousel {
     background: white;
     border: 1px solid #e1e1e1;
-    box-shadow: 0 0 7px rgba($color: #000000, $alpha: .16);
+    -webkit-box-shadow: 0 0 7px rgba($color: #000000, $alpha: .16);
+            box-shadow: 0 0 7px rgba($color: #000000, $alpha: .16);
     padding: 30px;
   }
 }
@@ -962,6 +1000,7 @@ $main_color: #EFB100;
               text-transform: uppercase;
               font-weight: 600;
               border: 2px solid $main_color;
+              -webkit-transition: .3s;
               transition: .3s;
   
               &:hover {
